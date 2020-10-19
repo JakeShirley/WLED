@@ -151,6 +151,8 @@ void setRealtimePixel(uint16_t i, byte r, byte g, byte b, byte w);
 //um_manager.cpp
 class Usermod {
   public:
+    virtual ~Usermod() = default;
+    
     virtual void loop() {}
     virtual void setup() {}
     virtual void connected() {}

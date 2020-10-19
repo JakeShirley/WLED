@@ -242,6 +242,7 @@ typedef unsigned int IdxT;
 ** is to copy them to an array of a known type and use the array values.
 */
 static unsigned int l_randomizePivot (void) {
+  /* This doesn't work here because clock I guess
   clock_t c = clock();
   time_t t = time(NULL);
   unsigned int buff[sof(c) + sof(t)];
@@ -250,7 +251,8 @@ static unsigned int l_randomizePivot (void) {
   memcpy(buff + sof(c), &t, sof(t) * sizeof(unsigned int));
   for (i = 0; i < sof(buff); i++)
     rnd += buff[i];
-  return rnd;
+  */ 
+  return (unsigned int)(rand());
 }
 
 #endif					/* } */
